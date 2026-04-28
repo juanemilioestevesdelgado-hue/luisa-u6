@@ -14,15 +14,15 @@ import {
     arrayRemove
 } from "firebase/firestore";
 
-// Firebase configuration for 5ta Brigada
+// Firebase configuration for CIA6
 const firebaseConfig = {
-    apiKey: "AIzaSyBpGkDT1Fz-XqY_H7clwtHYiwyeCsWvrQk",
-    authDomain: "inventario-5ta-brigada.firebaseapp.com",
-    projectId: "inventario-5ta-brigada",
-    storageBucket: "inventario-5ta-brigada.firebasestorage.app",
-    messagingSenderId: "903523003246",
-    appId: "1:903523003246:web:bd4cbd336d7f01ac46ef7f",
-    measurementId: "G-LFWZTZFGRR"
+  apiKey: "AIzaSyBrT6R7FfLJf8PobA8HVVw2jaVA9bS8ens",
+  authDomain: "u6-luisa.firebaseapp.com",
+  projectId: "u6-luisa",
+  storageBucket: "u6-luisa.firebasestorage.app",
+  messagingSenderId: "653116231840",
+  appId: "1:653116231840:web:f034f17e2800498e47b9c5",
+  measurementId: "G-P42X8H3TFJ"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -37,7 +37,7 @@ const db = getFirestore(app);
 const IMGBB_API_KEY = "6f61e5ee8f8afa155a55c439b13602e5";
 
 let reviewedCount = 0;
-let currentUnit = "5ta Brigada";
+let currentUnit = "CIA6";
 let currentCollection = "inventory";
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -1069,7 +1069,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
                 });
 
-                pdfDoc.save('inventario_5ta_brigada.pdf');
+                pdfDoc.save('inventario_cia6.pdf');
             } catch (err) {
                 console.error("Error generating PDF:", err);
                 alert('Error al generar PDF');
@@ -1113,7 +1113,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const worksheet = XLSX.utils.json_to_sheet(excelData);
                 const workbook = XLSX.utils.book_new();
                 XLSX.utils.book_append_sheet(workbook, worksheet, "Inventario");
-                XLSX.writeFile(workbook, "inventario_5ta_brigada.xlsx");
+                XLSX.writeFile(workbook, "inventario_cia6.xlsx");
             } catch (err) {
                 console.error("Error generating Excel:", err);
                 alert('Error al generar Excel');
@@ -1441,7 +1441,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (items.length === 0) {
                     if (intent.greet) {
                         const cats = [...new Set(currentInventoryData.map(i => (i.descripcion||'').split(' ')[0]))].slice(0,8).join(', ');
-                        return `¡Hola ${inventariador || 'Bombero'}! 👋 Soy el Cerebro Logístico 5ta Brigada.\n\nPuedo ayudarte con:\n  🔍 Búsquedas: "cuántos pitones hay", "busca escaleras"\n  📊 Análisis: "clasifica los tramos", "analiza el inventario"\n  📄 Reportes: "descarga el PDF", "exportar Excel"\n  🗺️ Ubicaciones: "dónde están los cascos"\n\nEquipos disponibles en esta unidad: ${cats}... ¿Qué necesitas? 🚒`;
+                        return `¡Hola ${inventariador || 'Bombero'}! 👋 Soy el Cerebro Logístico CIA6.\n\nPuedo ayudarte con:\n  🔍 Búsquedas: "cuántos pitones hay", "busca escaleras"\n  📊 Análisis: "clasifica los tramos", "analiza el inventario"\n  📄 Reportes: "descarga el PDF", "exportar Excel"\n  🗺️ Ubicaciones: "dónde están los cascos"\n\nEquipos disponibles en esta unidad: ${cats}... ¿Qué necesitas? 🚒`;
                     }
                     return null;
                 }

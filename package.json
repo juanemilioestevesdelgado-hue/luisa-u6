@@ -1,5 +1,5 @@
 {
-  "name": "inventario-5ta-brigada",
+  "name": "luisa-u6",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,5 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "firebase": "^12.12.1"
+  }
 }
