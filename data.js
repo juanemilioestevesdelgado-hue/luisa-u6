@@ -1,4 +1,4 @@
-const fullInventory = [
+export const fullInventory = [
     { codigo: "28184", sicafi: "00028184", pf: "2016109", descripcion: "ABSORBENTES DE 2 1/2\"", ubicacion: "I-249-U-6", marca: "No Aplica", modelo: "NA", serie: "NA", estado: "bueno" },
     { codigo: "28185", sicafi: "00028185", pf: "2016110", descripcion: "ABSORBENTES DE 2 1/2\"", ubicacion: "I-249-U-6", marca: "No Aplica", modelo: "NA", serie: "NA", estado: "bueno" },
     { codigo: "34507", sicafi: "00034507", pf: "2006075", descripcion: "ACOPLE DOBLE HEMBRA DE 2 1/2\"", ubicacion: "I-249-U-6", marca: "No Aplica", modelo: "NA", serie: "NA", estado: "bueno" },
